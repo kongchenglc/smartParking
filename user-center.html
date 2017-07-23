@@ -138,7 +138,7 @@
         <li class="header">主菜单</li>
         <li class="treeview">
           <a href="index.html">
-            <i class="fa fa-dashboard actived"></i> <span>仪表盘</span>
+            <i class="fa fa-dashboard actived"></i> <span>管理中心</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -148,7 +148,7 @@
           <a href="parking-manage.html">
             <i class="fa fa-th"></i> <span>车位管理</span>
             <span class="pull-right-container">
-              <small class="label pull-right bg-green">Hot</small>
+              <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
         </li>
@@ -159,9 +159,6 @@
               <span class="label label-primary pull-right">1</span>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="parking-record.html"><i class="fa fa-circle-o"></i> 停车查询</a></li>
-          </ul>
         </li>
 
              <li class="treeview">
@@ -169,7 +166,7 @@
             <i class="fa fa-laptop"></i>
             <span>故障工单</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+              <span class="label label-danger pull-right">1</span>
             </span>
           </a>
         </li>
@@ -179,20 +176,7 @@
             <i class="fa fa-files-o"></i>
             <span>个人中心</span>
             <span class="pull-right-container">
-              <span class="label label-primary pull-right">2</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="user-center.html"><i class="fa fa-circle-o"></i>查看信息</a></li>
-            <li><a href="user-center.html"><i class="fa fa-circle-o"></i> 修改密码</a></li>
-
-          </ul>
-        </li>
-        <li>
-          <a href="calendar.html">
-            <i class="fa fa-calendar"></i> <span>日历</span>
-            <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
+              <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
         </li>
@@ -232,19 +216,9 @@
                 ovenzeze
               </span><br>
               <hr>              
-              <strong  class="col-md-6"><i class="fa fa-institution margin-r-5"></i>所属公司：</strong>
+              <strong  class="col-md-6"><i class="fa margin-r-5">&#xf007;</i>账号：</strong>
               <span class="text-muted col-md-6">
-                西安邮电大学
-              </span><br>
-              <hr>              
-              <strong  class="col-md-6"><i class="fa fa-car margin-r-5"></i>管理停车场：</strong>
-              <span class="text-muted col-md-6">
-                西安邮电大学A-01
-              </span><br>
-              <hr>              
-              <strong  class="col-md-6"><i class="fa fa-group margin-r-5"></i>用户类型：</strong>
-              <span class="text-muted col-md-6">
-                普通管理员
+                04151092
               </span><br>
               <hr>              
               <strong class="col-md-6"><i class="fa fa-calendar margin-r-5 "></i>上次登录：</strong>
@@ -252,6 +226,8 @@
                2016-9-2 19:20
               </span><br>
               <hr>
+              <span class="col-md-6"></span>
+              <button type="submit" class="btn btn-primary">修改信息</button>   
             </div>
             </div>
             <!-- /.box-body -->
@@ -286,8 +262,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.5
     </div>
-    <strong>Copyright &copy; 2016 <a href="http://thoughtcoding.csxupt.com">智停科技</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; 2016 <a href="http://thoughtcoding.csxupt.com">智停科技</a>.</strong>版权所有。
   </footer>
   </div>
 <!-- ./wrapper -->
@@ -302,5 +277,7 @@
 <script src="js/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="js/app.min.js"></script>
+<!-- Rebulid -->
+<script src="js/height-rebulid.js"></script> 
 </body>
 </html>
