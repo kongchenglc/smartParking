@@ -18,6 +18,12 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/_all-skins.min.css">
 
+  <style>
+    @media screen and (min-width:1000px) {
+      #trouble {float:left;}
+    }
+  </style>
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -57,19 +63,33 @@
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">2</span>
+              <span class="label label-danger">3</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">你有2个待处理问题</li>
+              <li class="header">你有3个待处理问题</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="trouble-ticket.html">
+                  <li style="padding:10px;"><!-- Task item -->
+                    <span>
                       <span>
                         修理A199传感器<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
                       </span>
-                    </a>
+                    </span>
+                  </li>
+                  <li style="padding:10px;"><!-- Task item -->
+                    <span>
+                      <span>
+                        修理A045地锁<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
+                      </span>
+                    </span>
+                  </li>
+                  <li style="padding:10px;"><!-- Task item -->
+                    <span>
+                      <span>
+                        修理A055停车位<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
+                      </span>
+                    </span>
                   </li>
                   <!-- end task item -->
                 </ul>
@@ -191,7 +211,7 @@
   <!-- =============================================== -->
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" id="trouble">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -207,14 +227,20 @@
     <!-- Main content -->
     <section class="content">
          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -223,20 +249,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -245,20 +279,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -267,20 +309,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -289,20 +339,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -311,20 +369,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -333,20 +399,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -355,20 +429,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -377,20 +459,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -399,20 +489,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->           
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -421,20 +519,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -443,20 +549,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -465,20 +579,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -487,20 +609,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -509,20 +639,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -531,20 +669,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -553,20 +699,28 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
-          </div>
-          <!--车位Table-->              
-          <!--车位Table-->
-         <div class="col-md-2">
-          <div class="box box-solid box-default">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                <th class="fa  fa-hashtag col-md-4"></th>
-                  <th style="text-align: center;">A-01</th>
-                </tr>                
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
                 <tr>
                 <th class=" fa fa-automobile col-md-4"></th>
                   <th>陕A：A8888888</th>
@@ -575,11 +729,223 @@
                 <th class="fa fa-calendar-minus-o col-md-4"></th>
                 <th>2016-2-15 19:25</th>
                   </tr>
-                   </table>
+              </table>
             </div>
+            <!-- /.box-body -->
           </div>
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
+                <tr>
+                <th class=" fa fa-automobile col-md-4"></th>
+                  <th>陕A：A8888888</th>
+                </tr>
+                <tr>
+                <th class="fa fa-calendar-minus-o col-md-4"></th>
+                <th>2016-2-15 19:25</th>
+                  </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
           </div>
-          <!--车位Table-->           
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
+                <tr>
+                <th class=" fa fa-automobile col-md-4"></th>
+                  <th>陕A：A8888888</th>
+                </tr>
+                <tr>
+                <th class="fa fa-calendar-minus-o col-md-4"></th>
+                <th>2016-2-15 19:25</th>
+                  </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
+                <tr>
+                <th class=" fa fa-automobile col-md-4"></th>
+                  <th>陕A：A8888888</th>
+                </tr>
+                <tr>
+                <th class="fa fa-calendar-minus-o col-md-4"></th>
+                <th>2016-2-15 19:25</th>
+                  </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
+                <tr>
+                <th class=" fa fa-automobile col-md-4"></th>
+                  <th>陕A：A8888888</th>
+                </tr>
+                <tr>
+                <th class="fa fa-calendar-minus-o col-md-4"></th>
+                <th>2016-2-15 19:25</th>
+                  </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
+                <tr>
+                <th class=" fa fa-automobile col-md-4"></th>
+                  <th>陕A：A8888888</th>
+                </tr>
+                <tr>
+                <th class="fa fa-calendar-minus-o col-md-4"></th>
+                <th>2016-2-15 19:25</th>
+                  </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
+                <tr>
+                <th class=" fa fa-automobile col-md-4"></th>
+                  <th>陕A：A8888888</th>
+                </tr>
+                <tr>
+                <th class="fa fa-calendar-minus-o col-md-4"></th>
+                <th>2016-2-15 19:25</th>
+                  </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
+        <!--车位Table-->
+         <div class="col-md-3">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">#A-01</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-striped">               
+                <tr>
+                <th class=" fa fa-automobile col-md-4"></th>
+                  <th>陕A：A8888888</th>
+                </tr>
+                <tr>
+                <th class="fa fa-calendar-minus-o col-md-4"></th>
+                <th>2016-2-15 19:25</th>
+                  </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--车位Table-->
     </section>
     <!-- main content -->
   </div>
@@ -613,7 +979,5 @@
 <script src="js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="js/demo.js"></script>
-<!-- Rebulid -->
- <script src="js/height-rebulid.js"></script> 
 </body>
 </html>
