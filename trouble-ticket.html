@@ -59,30 +59,27 @@
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <li style="padding:10px;"><!-- Task item -->
+                  <li style="padding:10px;">
+                    <!-- Task item -->
                     <span>
-                      <span>
-                        修理A199传感器<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
-                      </span>
+                      修理A199传感器<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
                     </span>
                   </li>
-                  <li style="padding:10px;"><!-- Task item -->
+                  <li style="padding:10px;">
+                    <!-- Task item -->
                     <span>
-                      <span>
-                        修理A045地锁<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
-                      </span>
+                      修理A045地锁<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
                     </span>
                   </li>
-                  <li style="padding:10px;"><!-- Task item -->
+                  <li style="padding:10px;">
+                    <!-- Task item -->
                     <span>
-                      <span>
-                        修理A055停车位<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
-                      </span>
+                      修理A055停车位<i class="fa fa-cogs pull-right" style="color:#DD4B39"></i> 
                     </span>
                   </li>
                   <!-- end task item -->
                 </ul>
-              </li>
+                </li>
               <li class="footer">
                 <a href="trouble-ticket.html">查看所有事项</a>
               </li>
@@ -163,7 +160,7 @@
                 <li class="treeview">
           <a href="parking-record.html">
             <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change"></i> <span>停车记录</span>
-            <span class="pull-right-contai data-toggle="modal" data-target="#modal-delete"ner">
+            <span class="pull-right-contai data-toggle="modal" data-target="#modal-remove"ner">
               <span class="label label-primary pull-right">1</span>
             </span>
           </a>
@@ -222,66 +219,66 @@
             <!-- /.box-header -->
             <div class="box-body">
               <ul class="todo-list">
-                <li>
+                <li id="item_1">
                   <i class="fa fa-check-square-o" style="color:#00A65A"></i> 
                   <!-- todo text -->
                   <span class="text">修理A023停车位</span>
                   <!-- Emphasis label -->
                   <small class="label label-danger"><i class="fa fa-clock-o"></i>二十分钟</small>
-                  <!-- General tools such as edit or delete-->
+                  <!-- General tools such as edit or remove-->
                   <div class="tools">
-                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change"></i>
-                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-delete"></i>
+                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change" onclick="item_change(this)"></i>
+                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-remove" onclick="item_remove(this)"></i>
                   </div>
                 </li>
-                <li>
+                <li id="item_2">
 
                   <i class="fa fa-check-square-o" style="color:#00A65A"></i> 
                   <span class="text">查看网络故障</span>
                   <small class="label label-info"><i class="fa fa-clock-o"></i> 四个小时</small>
                   <div class="tools">
-                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change"></i>
-                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-delete"></i>
+                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change" onclick="item_change(this)"></i>
+                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-remove" onclick="item_remove(this)"></i>
                   </div>
                 </li>
-                <li>
+                <li id="item_3">
 
                   <i class="fa fa-check-square-o" style="color:#00A65A"></i> 
                   <span class="text">检查停车闸机</span>
                   <small class="label label-warning"><i class="fa fa-clock-o"></i> 一天</small>
                   <div class="tools">
-                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change"></i>
-                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-delete"></i>
+                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change" onclick="item_change(this)"></i>
+                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-remove" onclick="item_remove(this)"></i>
                   </div>
                 </li>
-                <li>
+                <li id="item_4">
 
-                  <a href="" data-toggle="modal" data-target="#modal-repire"><i class="fa fa-cogs" style="color:#DD4B39"></i></a>
+                  <a href="" data-toggle="modal" data-target="#modal-repair" onclick="item_repair(this)"><i class="fa fa-cogs" style="color:#DD4B39"></i></a>
                   <span class="text">修理A055停车位</span>
                   <small class="label label-success"><i class="fa fa-clock-o"></i>三天</small>
                   <div class="tools">
-                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change"></i>
-                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-delete"></i>
+                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change" onclick="item_change(this)"></i>
+                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-remove" onclick="item_remove(this)"></i>
                   </div>
                 </li>
-                <li>
+                <li id="item_5">
 
-                  <a href="" data-toggle="modal" data-target="#modal-repire"><i class="fa fa-cogs" style="color:#DD4B39"></i></a>
+                  <a href="" data-toggle="modal" data-target="#modal-repair" onclick="item_repair(this)"><i class="fa fa-cogs" style="color:#DD4B39"></i></a>
                   <span class="text">修理A045地锁</span>
                   <small class="label label-primary"><i class="fa fa-clock-o"></i>一周</small>
                   <div class="tools">
-                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change"></i>
-                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-delete"></i>
+                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change" onclick="item_change(this)"></i>
+                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-remove" onclick="item_remove(this)"></i>
                   </div>
                 </li>
-                <li>
+                <li id="item_6">
 
-                  <a href="" data-toggle="modal" data-target="#modal-repire"><i class="fa fa-cogs" style="color:#DD4B39"></i></a>
+                  <a href="" data-toggle="modal" data-target="#modal-repair" onclick="item_repair(this)"><i class="fa fa-cogs" style="color:#DD4B39"></i></a>
                   <span class="text">修理A199传感器</span>
                   <small class="label label-default"><i class="fa fa-clock-o"></i>两周</small>
                   <div class="tools">
-                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change"></i>
-                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-delete"></i>
+                    <i class="fa fa-edit" data-toggle="modal" data-target="#modal-change" onclick="item_change(this)"></i>
+                    <i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-remove" onclick="item_remove(this)"></i>
                   </div>
                 </li>
               </ul>
@@ -347,8 +344,8 @@
     </div>
     <!-- #/modal-change -->
 
-    <!-- modal-delete -->
-    <div class="modal modal-danger fade in" id="modal-delete" style="display: none; padding-right: 17px;">
+    <!-- modal-remove -->
+    <div class="modal fade in" id="modal-remove" style="display: none; padding-right: 17px;">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -361,17 +358,17 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
-            <button type="button" class="btn btn-warning">删除</button>
+            <button type="button" class="btn btn-primary">删除</button>
           </div>
         </div>
         <!-- /.modal-content -->
       </div>
       <!-- /.modal-dialog -->
     </div>
-    <!-- #/modal-delete -->
+    <!-- #/modal-remove -->
 
-    <!-- modal-repire -->
-    <div class="modal modal-default fade in" id="modal-repire" style="display: none; padding-right: 17px;">
+    <!-- modal-repair -->
+    <div class="modal modal-default fade in" id="modal-repair" style="display: none; padding-right: 17px;">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -391,7 +388,7 @@
       </div>
       <!-- /.modal-dialog -->
     </div>
-    <!-- #/modal-repire -->
+    <!-- #/modal-repair -->
 
     <!-- /.模态框 -->
 
@@ -413,5 +410,7 @@
 <script src="js/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="js/app.min.js"></script>
+<!-- my_js -->
+<script src="js/trouble-ticket.js"></script>
 </body>
 </html>
