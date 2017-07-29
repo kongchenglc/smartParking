@@ -1,4 +1,8 @@
-
+var parkData = document.getElementsByClassName("inner");
+var freeParkNum = parkData[1].children[0].innerText;
+var fullParkNum = parkData[2].children[0].innerText;
+var brokenParkNum = fullParkNum / parkData[3].children[0].childNodes[0].data * 100 - freeParkNum - fullParkNum;
+console.log(freeParkNum, fullParkNum, brokenParkNum, parkData[3].children[0].childNodes[0].data);
 // 基于准备好的dom，初始化echarts实例
 var myChart = echarts.init(document.getElementById('echarts'));
 // 指定图表的配置项和数据
@@ -34,9 +38,9 @@ option = {
             radius : '55%',
             center: ['50%', '50%'],
             data:[
-                {value:53, name:'空闲车位'},
-                {value:44, name:'正在使用'},
-                {value:3, name:'车位故障'}
+                {value: freeParkNum, name:'空闲车位'},
+                {value: fullParkNum, name:'正在使用'},
+                {value: brokenParkNum, name:'车位故障'}
             ].sort(function (a, b) { return a.value - b.value; }),
             roseType: 'radius',
             label: {
