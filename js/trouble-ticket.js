@@ -16,7 +16,7 @@ function item_repair(theItem) {
                 }
             }
         }
-        xhr.open("post","地址");
+        xhr.open("post","填java相对于html页面的地址");
         xhr.send(data);
     }
 }
@@ -39,7 +39,7 @@ function item_change(theItem) {
                 }
             }
         }
-        xhr.open("post","地址");
+        xhr.open("post","填java相对于html页面的地址");
         xhr.send(data);
     }
 }
@@ -62,7 +62,7 @@ function item_remove(theItem) {
                 }
             }
         }
-        xhr.open("post","地址");
+        xhr.open("post","填java相对于html页面的地址");
         xhr.send(data);
     }
 }
