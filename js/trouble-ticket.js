@@ -66,3 +66,27 @@ function item_remove(theItem) {
         xhr.send(data);
     }
 }
+
+function item_add(theItem) {
+    var model_id = document.getElementById('modal-default');
+    var add_input = model_id.getElementsByTagName("input")[0];
+    var add_btn = model_id.getElementsByClassName("btn-primary")[0];
+    var data;
+    add_btn.onclick = function() {
+        console.log("ajax");
+        var xhr = new XMLHttpRequest();
+        var addText = add_input.value;
+        data = JSON.stringify({"add": addText});
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4) {
+                if(xhr.status == 200) {
+                    location.reload(true);
+                } else {
+                    alert("操作失败，请检查网络！");
+                }
+            }
+        }
+        xhr.open("post","填java相对于html页面的地址");
+        xhr.send(data);
+    }
+}
