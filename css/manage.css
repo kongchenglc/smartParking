@@ -1,7 +1,31 @@
+.content-header {
+    padding: 15px;
+}
+
+#theMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
 .manage-map {
-    display: block;
+    position: relative;
     width: 60%;
     margin: 30px auto;
+}
+
+.manage-map img{
+    width: 100%;
     user-select: none;
     pointer-events: none;
+}
+
+#mapsLegend {
+    position: absolute;
+    user-select: none;
+    left: -25%;
+    width: 20%;
 }
