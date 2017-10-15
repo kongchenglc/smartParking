@@ -1,0 +1,7 @@
+.manage-map {
+    display: block;
+    width: 60%;
+    margin: 30px auto;
+    user-select: none;
+    pointer-events: none;
+}
