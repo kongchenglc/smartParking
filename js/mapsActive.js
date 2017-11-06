@@ -1,7 +1,6 @@
 let data = getJSON();
 drawMap(data);
 mapsLegend();
-// addEvents(data);
 
 //getJSON
 function getJSON() {
@@ -49,6 +48,12 @@ function getJSON() {
                 "Y": 3,
                 "status": "使用中"
             },
+            {
+                "num": 2452,
+                "X": 20,
+                "Y": 5,
+                "status": "故障"
+            }
         ]
     };
     theJSON = JSON.stringify(theJSON);
@@ -75,9 +80,10 @@ function getJSON() {
 
 //drawMap
 function drawMap(data) {
-    const manageMap = document.getElementById("manage-map");
-    const value = JSON.parse(data).value;
-    const boxes = document.createDocumentFragment();
+    const manageMap = document.getElementById("manage-map"),
+          value = JSON.parse(data).value;
+    let boxes = "",
+        color = "white";
 
     //初始化弹出框
     $(function () {
@@ -85,42 +91,29 @@ function drawMap(data) {
     })
 
     for (let item of value) {
-        // console.log(item);
         if (item.status === "使用中") {
-            normal(item);
+            color = 'rgba(30, 166, 91, .7)'
         } else if(item.status === "已预定") {
-            predetermined(item);
+            color = 'rgba(0, 192, 240, .7)'
         } else if (item.status === "故障") {
-            error(item);
+            color = 'rgba(221, 75, 57, .7)'
         }
-    }
-
-    function normal() {
-
-    }
-
-    function predetermined() {
-
-    }
-
-    function error() {
-        
-    }
-
-    boxes.app
-        `<div style="
+        boxes +=`<div style="
             position: absolute;
-            left: ${ 0 * 4.15 }%;
-            top: ${ 5 * 16.7 }%;
+            left: ${ item.X * 4.15}%;
+            top: ${ item.Y * 16.7}%;
             margin: .2%;
             width: 3.8%;
             height: 15.5%;
-            background-color: rgba(221, 75, 57, .7)" 
+            background-color: ${color}" 
         data-toggle="popover" data-trigger="hover" data-HTML="true" data-placement="bottom" data-content="
+            <h4>#A-01</h4>
             <div>车牌号：陕A8888888</div>
-            <div>车位状态：已预定</div>
+            <div>车位状态：${item.status}</div>
             <div>停车时间：2016-2-15 19:25</div>
         "></div>`;
+    }
+    
     manageMap.innerHTML += boxes;
 }
 
@@ -152,31 +145,4 @@ function mapsLegend() {
     ctx.fillStyle = '#DCDCDC';
     ctx.font = "40px Georgia";
     ctx.fillText("使用中", 110, 258);
-}
-
-
-function addEvents(data) {
-    let theCanvas = document.getElementById('theMap');
-    data = JSON.parse(data).value;
-    theCanvas.addEventListener('click', event => {
-        event = event || window.event;
-        theWidth = event.target.offsetWidth / 24;
-        theHeight = event.target.offsetHeight / 6;
-
-        let X = ~~(event.offsetX / theWidth);
-        let Y = ~~(event.offsetY / theHeight);
-
-        for (let value of data) {
-            if (X === value.X && Y === value.Y) {
-                showModal(value);
-            }
-        }
-    })
-}
-
-
-function showModal({ num, X, Y, status }) {
-    document.getElementById("mySmallModalLabel").innerHTML = "#A-" + num;
-    document.getElementById("modal-status").innerHTML = status;
-    $("#smallmodal").modal("show");
 }
