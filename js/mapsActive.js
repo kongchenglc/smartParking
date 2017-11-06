@@ -1,10 +1,10 @@
 let data = getJSON();
 drawMap(data);
 mapsLegend();
-addEvents(data);
+// addEvents(data);
 
 //getJSON
-function getJSON(){
+function getJSON() {
     let theJSON = {
         "value": [
             {
@@ -72,47 +72,62 @@ function getJSON(){
     return theJSON;
 }
 
+
 //drawMap
 function drawMap(data) {
-    let map = document.getElementById('theMap');
-    let ctx = map.getContext('2d');
-    data = JSON.parse(data).value;
-    // console.log(data);
-    
-    for (var value of data) {
-        // console.log(value);
-        if (value.status === "使用中") {
-            normal(value);
-        } else if(value.status === "已预定") {
-            predetermined(value);
-        } else if (value.status === "故障") {
-            error(value);
+    const manageMap = document.getElementById("manage-map");
+    const value = JSON.parse(data).value;
+    const boxes = document.createDocumentFragment();
+
+    //初始化弹出框
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+
+    for (let item of value) {
+        // console.log(item);
+        if (item.status === "使用中") {
+            normal(item);
+        } else if(item.status === "已预定") {
+            predetermined(item);
+        } else if (item.status === "故障") {
+            error(item);
         }
     }
 
-    //故障
-    function error({X: X, Y: Y}) {
-        ctx.fillStyle = 'rgba(221, 75, 57, .8)';
-        ctx.fillRect(X * 12.45, Y * 25, 12.45, 25);
+    function normal() {
+
     }
 
-    //已预定
-    function predetermined({ X: X, Y: Y }) {
-        ctx.fillStyle = 'rgba(0, 192, 240, .8)';
-        ctx.fillRect(X * 12.45, Y * 25, 12.45, 25);
+    function predetermined() {
+
     }
 
-    //使用中
-    function normal({ X: X, Y: Y }) {
-        ctx.fillStyle = 'rgba(30, 166, 91, .8)';
-        ctx.fillRect(X * 12.45, Y * 25, 12.45, 25);
+    function error() {
+        
     }
+
+    boxes.app
+        `<div style="
+            position: absolute;
+            left: ${ 0 * 4.15 }%;
+            top: ${ 5 * 16.7 }%;
+            margin: .2%;
+            width: 3.8%;
+            height: 15.5%;
+            background-color: rgba(221, 75, 57, .7)" 
+        data-toggle="popover" data-trigger="hover" data-HTML="true" data-placement="bottom" data-content="
+            <div>车牌号：陕A8888888</div>
+            <div>车位状态：已预定</div>
+            <div>停车时间：2016-2-15 19:25</div>
+        "></div>`;
+    manageMap.innerHTML += boxes;
 }
 
 
 
 //mapsLegend
-function mapsLegend(){
+function mapsLegend() {
     let Legend = document.getElementById('mapsLegend');
     let ctx = Legend.getContext('2d');
     Legend.height = 400;
@@ -143,16 +158,16 @@ function mapsLegend(){
 function addEvents(data) {
     let theCanvas = document.getElementById('theMap');
     data = JSON.parse(data).value;
-    theCanvas.addEventListener('click', event=>{
+    theCanvas.addEventListener('click', event => {
         event = event || window.event;
         theWidth = event.target.offsetWidth / 24;
         theHeight = event.target.offsetHeight / 6;
-        
+
         let X = ~~(event.offsetX / theWidth);
         let Y = ~~(event.offsetY / theHeight);
-        
+
         for (let value of data) {
-            if(X === value.X && Y === value.Y) {
+            if (X === value.X && Y === value.Y) {
                 showModal(value);
             }
         }
@@ -160,8 +175,8 @@ function addEvents(data) {
 }
 
 
-function showModal({num, X, Y, status}) {
+function showModal({ num, X, Y, status }) {
     document.getElementById("mySmallModalLabel").innerHTML = "#A-" + num;
-    document.getElementById("modal-status").innerHTML = status;    
+    document.getElementById("modal-status").innerHTML = status;
     $("#smallmodal").modal("show");
 }
