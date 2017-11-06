@@ -11,13 +11,13 @@
     user-select: none;
 }
 
-.manage-map {
+#manage-map {
     position: relative;
     width: 60%;
     margin: 30px auto;
 }
 
-.manage-map img{
+#manage-map>img{
     width: 100%;
     user-select: none;
     pointer-events: none;
