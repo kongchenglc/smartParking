@@ -294,21 +294,22 @@
     <!-- 模态框 -->
     <!-- modal-default -->
     <div class="modal fade in" id="modal-default" style="display: none; padding-right: 17px;">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span></button>
+              <span aria-hidden="true">×</span></button>
             <h4 class="modal-title">添加条目</h4>
           </div>
           <div class="modal-body">
             <div class="box-body">
-              <strong class="col-md-4"><i class="fa fa-book margin-r-5"></i>故障描述：</strong>
-              <input type="text" class="col-md-8"></input><br>
+              <div class="form-group">
+                <label>故障描述</label>
+                <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
             <button type="button" class="btn btn-primary" onclick="item_add(this)">添加</button>
           </div>
         </div>
@@ -320,7 +321,7 @@
 
     <!-- modal-change -->
     <div class="modal fade in" id="modal-change" style="display: none; padding-right: 17px;">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -329,12 +330,13 @@
           </div>
           <div class="modal-body">
             <div class="box-body">
-              <strong class="col-md-4"><i class="fa fa-book margin-r-5"></i>故障描述：</strong>
-              <input type="text" class="col-md-8"></input><br>
+              <div class="form-group">
+                <label>故障描述</label>
+                <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
             <button type="button" class="btn btn-primary">更改</button>
           </div>
         </div>
@@ -346,7 +348,7 @@
 
     <!-- modal-remove -->
     <div class="modal fade in" id="modal-remove" style="display: none; padding-right: 17px;">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -354,10 +356,9 @@
             <h4 class="modal-title">删除条目</h4>
           </div>
           <div class="modal-body">
-            <h3 style="margin-left: 20px">确认删除此条目</h3>
+            <h4 style="margin-left: 20px">确认删除此条目</h4>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
             <button type="button" class="btn btn-primary">删除</button>
           </div>
         </div>
@@ -369,7 +370,7 @@
 
     <!-- modal-repair -->
     <div class="modal modal-default fade in" id="modal-repair" style="display: none; padding-right: 17px;">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -377,10 +378,9 @@
             <h4 class="modal-title">修复完成</h4>
           </div>
           <div class="modal-body">
-            <h3 style="margin-left: 20px">确认修复完成</h3>
+            <h4 style="margin-left: 20px">确认修复完成</h4>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
             <button type="button" class="btn btn-primary">完成</button>
           </div>
         </div>
